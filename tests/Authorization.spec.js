@@ -21,8 +21,8 @@ test.describe('Authorization', () => {
     await page.locator('[placeholder="Email"]').fill(userData.invalidEmail);
     await page.locator('[placeholder="Пароль"]').fill(userData.invalidPassword);
     await page.locator('[data-testid="login-submit-btn"]').click();
-    const errorMassage = await page.locator('[data-testid="login-error-hint"]');
-    await page.locator('[data-testid="profile-personal-info-avatar-popup"]').screenshot({ path: './screenshots/errorMassage.png', fullPage: true});
-    expect(errorMassage).toBeVisible;
+    const errorMessage = await page.locator('[data-testid="login-error-hint"]');
+    await page.locator('[data-testid="profile-personal-info-avatar-popup"]').screenshot({ path: './screenshots/errorMessage.png', fullPage: true});
+    expect(errorMessage).toBeVisible;
   });
 });
