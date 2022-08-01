@@ -14,9 +14,9 @@ test("test", async ({ page }) => {
 
   page.click("text=Бизнес и управление");
 
-  // Click text=Как перенести своё дело в онлайн
-  await page.click("text=Как перенести своё дело в онлайн");
+  // Click text=Как стать продакт или проджект-менеджером
+  await page.click("text=Как стать продакт или проджект-менеджером");
   await expect(page).toHaveURL(
-    "https://netology.ru/programs/kak-perenesti-svoyo-delo-v-onlajn-bp"
+    "https://netology.ru/programs/product-project-marathon"
   );
 });
